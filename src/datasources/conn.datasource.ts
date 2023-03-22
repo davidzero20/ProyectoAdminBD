@@ -9,7 +9,15 @@ const config = {
   port: 1433,
   user: 'sa',
   password: 'C0ntrol1*',
-  database: 'LotificadoraBD'
+  database: 'LotificadoraBD',
+
+  options: {
+
+    "encrypt": false, // need to stop ssl checking in case of local db
+
+    "enableArithAbort": true
+
+  }
 };
 
 // Observe application's life cycle to disconnect the datasource when
